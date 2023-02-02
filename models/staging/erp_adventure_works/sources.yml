@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Banco réplica do erp da AdventureWorks
+    schema: sap_adw 
+    tables:
+
+      - name: salesorderheader
+        description: Chave ordem de vendas. 
+        columns: 
+          - name: salesorderid
+            description: Chave primária de tabela de ordens. 
+          - name: orderdate
+            description: ...
+
+      - name: salesorderdetail
+        description: Detalhe de vendas. 
+
+      - name: salesorderheadersalesreason
+        description: Ordem do motivo da venda. 
+
+      - name: salesreason
+        description: Motivo da vendas. 
+
+      - name: salesterritory
+        description: Territorio da vendas. 
+
+      - name: creditcard
+        description: Cartão de credito. 
+
+
+
+      - name: product
+        description: Chave de produto. 
+
+
+      - name: productcategory
+        description: Categoria de produto. 
+
+      
+      - name: productsubcategory
+        description: Sub Categoria de produto. 
+
+
+      
+      - name: person
+        description: Chave de pessoa. 
+
+          
+
+
+
+              
+      
