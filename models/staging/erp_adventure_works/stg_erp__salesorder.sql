@@ -1,7 +1,7 @@
 with
     source_salesorder as (
         select 
-            cast(salesorderid as int) as ordem_de_vendas_id
+            cast(salesorderid as string) as pedido_id
             --, cast(revisionnumber	as ) 				
             , cast(orderdate as timestamp) as data_do_pedido				
             , cast(duedate as timestamp) as data_de_vencimento					
@@ -14,7 +14,7 @@ with
             --, cast(salespersonid					
             , cast(territoryid as int) as id_territorio 				
             --, cast(billtoaddressid					
-            --, cast(shiptoaddressid					
+            , cast(shiptoaddressid as int) as endereco_id				
             --, cast(shipmethodid					
             , cast(creditcardid	as string) as id_cartao_credito				
             --, cast(creditcardapprovalcode					

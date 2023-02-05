@@ -2,12 +2,13 @@ with
     source_person as (
         select 
             cast(businessentityid as int) as entidade_de_negocio_id		
+            , cast(firstname as string) as nome				
+            , cast(lastname as string) as sobrenome
+            , cast((firstname || ' ' || lastname) as string) nome_cliente
+            --, middlename					
             --, persontype					
             --, namestyle					
             --, title					
-            , cast(firstname as string) as nome				
-            --, middlename					
-            , cast(lastname as string) as sobrenome					
             --, suffix					
             --, emailpromotion					
             --, additionalcontactinfo					

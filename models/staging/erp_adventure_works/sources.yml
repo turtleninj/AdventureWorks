@@ -26,9 +26,16 @@ sources:
       - name: salesterritory
         description: Territorio da vendas. 
 
+      - name: address
+
+      - name: countryregion
+
+      - name: stateprovince
+
+      - name: store
+
       - name: creditcard
         description: Cartão de credito. 
-
 
 
       - name: product
@@ -42,10 +49,11 @@ sources:
       - name: productsubcategory
         description: Sub Categoria de produto. 
 
-
       
       - name: person
         description: Chave de pessoa. 
+
+      - name: customer
 
           
 
