@@ -74,8 +74,17 @@ with
                 when desconto_preco_unitario = 0 then 'Não'
                 else 'Não'
                 end as is_teve_desconto
-            , preco_unitario * qnt_pedido as total_bruto
-            , (1 - desconto_preco_unitario) * preco_unitario * qnt_pedido as total_liquido
+            , case
+                when  status = 1 then 'Em progresso'
+                when  status = 2 then 'Aprovado'
+                when  status = 3 then 'Em espera' 
+                when  status = 4 then 'Rejeitado' 
+                when  status = 5 then 'Enviado'
+                when  status = 6 then 'Cancelado' 
+                else 'Sem status'
+                end as status_name
+           , preco_unitario * qnt_pedido as total_bruto
+           , (1 - desconto_preco_unitario) * preco_unitario * qnt_pedido as total_liquido
         from joined
     )
 

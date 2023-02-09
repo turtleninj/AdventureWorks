@@ -37,6 +37,7 @@ models:
       erp_adventure_works:
         +materialized: view
 
+
     marts: 
       +materialized: table
 
@@ -46,4 +47,5 @@ seeds:
   dbt_abarbaresco: # <-- Name of the project. If you renamed your project you have to change this as well
     sap_adventure_works:
       +schema: sap_adw
+    
 
