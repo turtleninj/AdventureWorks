@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_produto
+    description: Dimensão com informação de produtos.
+    columns:
+      - name: sk_produto
+        description: É a primary key da dimensão de produtos. 
+        tests: 
+          - unique
+          - not_null
+      
+      - name: produtos_id
+        description : ID de identificação do produto.
+
+      - name: name
+        description : Nome do produto.
+
+      - name: subcategoria
+        description : Subcategoria que o produto pertence. 
+
+      - name: categoria
+        description : Categoria que o produto pertence.
+
+	
+
+
+
+	

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_cartao
+    description: Dimensão com informações do cartão usado na ordem de compra.
+    columns:
+      - name: sk_cartao
+        description: E a primary key da dimensão de cartão.
+        tests:
+          - unique
+          - not_null
+      
+      - name: cartao_de_credito_id	
+        description: O id do cartão usado na origem da ordem de compra.
+
+      - name: tipo_cartao_de_credito	
+        description: O tipo do cartão usado na ordem de compra.
+
+
+			
+			

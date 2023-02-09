@@ -18,14 +18,23 @@ with
     , uniao_tabela as (
         select
             product.produtos_id
-            ,case
-                when product.sub_categ_prod_id is null then 'Não identificado'
-                else product.sub_categ_prod_id
-                end as sub_categ_prod_id
-            ,productsubcategory.categ_prod_id
+            --,case
+            --    when product.sub_categ_prod_id is null then 'Não identificado'
+            --    else product.sub_categ_prod_id
+            --    end as sub_categ_prod_id
+            --,case
+            --    when productsubcategory.categ_prod_id is null then 'Não identificado'
+            --    else productsubcategory.categ_prod_id
+            --    end as categ_prod_id
             ,product.name
-            ,productsubcategory.subcategoria
-            ,productcategory.categoria
+            ,case
+                when productsubcategory.subcategoria is null then 'Não identificado'
+                else productsubcategory.subcategoria
+                end as subcategoria
+            ,case
+                when productcategory.categoria is null then 'Não identificado'
+                else productcategory.categoria
+                end as categoria
 
 		
             

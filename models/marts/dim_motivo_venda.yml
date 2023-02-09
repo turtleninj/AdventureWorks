@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_motivo_venda
+    description: Dimensão com informações do motivo da ordem de compra.
+    columns:
+      - name: sk_motivo_venda
+        description: E a primary key da dimensão de cartão.
+        tests:
+          - unique
+          - not_null
+      
+      - name: razao_venda_id	
+        description: O id da razão da da ordem de compra.
+
+      - name: razao_venda	
+        description: Razão da ordem de compra.
+
+      - name: origem_razao	
+        description: Origem da ordem de compra.
+
+
+	
+			
+
+	
